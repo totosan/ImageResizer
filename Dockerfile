@@ -1,5 +1,5 @@
 FROM python:3.11
-RUN apt- get update && apt- get install -y \
+RUN apt update && apt install -y \
     libpq-dev \
     python3-dev \
     && rm -rf /var/lib/apt/lists/*
