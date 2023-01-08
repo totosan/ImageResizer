@@ -6,4 +6,4 @@ RUN apt update && apt install -y \
 RUN pip install --upgrade pip
 COPY . .
 RUN pip install -r requirements.txt
-CMD [ "python", "./wsgi.py" ]
+CMD [ "gunicorn","--bind", "0.0.0.0:3500", "wsgi:app" ]
